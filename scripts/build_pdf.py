@@ -62,7 +62,9 @@ def main() -> None:
 
     if DIST.exists():
         shutil.rmtree(DIST)
-    (DIST / "assets").mkdir(parents=True)
+    # assets/ 全部進站（vendor 函式庫、字型、form-fill.js），僅排除原始空白檔
+    shutil.copytree(ROOT / "assets", DIST / "assets",
+                    ignore=shutil.ignore_patterns("form-blank.pdf"))
 
     shutil.copy(ROOT / "index.html", DIST / "index.html")
     shutil.copy(ROOT / "config.json", DIST / "config.json")

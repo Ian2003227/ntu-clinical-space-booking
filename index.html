@@ -3,30 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>臨床組空間借用｜臺大心理系</title>
-<meta name="description" content="臺大心理系臨床組教室與空間借用申請流程：查詢行事曆、下載申請單、簽名寄出、鑰匙領取。">
+<title>臨床心理學組空間借用｜國立臺灣大學心理學系</title>
+<meta name="description" content="國立臺灣大學心理學系臨床心理學組空間借用：查詢行事曆、線上填寫申請單並自動產生 PDF、完成簽名後寄出。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
 <style>
   :root {
-    --maroon: #7d1d2e;
-    --maroon-dark: #5c1522;
-    --maroon-soft: #a94b5c;
-    --gold: #c9a24b;
-    --ink: #2b2723;
-    --ink-soft: #6b625a;
-    --cream: #faf6f0;
+    --blue-deep: #29506b;
+    --blue: #3c6e8f;
+    --blue-mid: #5886a5;
+    --blue-soft: #a7c3d6;
+    --sky: #edf4f8;
+    --ink: #263239;
+    --ink-soft: #5f7280;
+    --bg: #f5f8fa;
     --card: #ffffff;
-    --line: #e8ddd0;
+    --line: #d8e4ec;
+    --warm: #d9a648;
+    --warm-soft: #fdf6e8;
     --radius: 18px;
-    --shadow: 0 10px 30px rgba(92, 21, 34, .08);
+    --shadow: 0 10px 30px rgba(41, 80, 107, .09);
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
     font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
-    background: var(--cream);
+    background: var(--bg);
     color: var(--ink);
     line-height: 1.75;
   }
@@ -36,36 +39,36 @@
   .hero {
     position: relative;
     background:
-      radial-gradient(1200px 500px at 80% -10%, rgba(201,162,75,.28), transparent 60%),
-      radial-gradient(900px 500px at 10% 110%, rgba(255,255,255,.10), transparent 60%),
-      linear-gradient(135deg, var(--maroon-dark) 0%, var(--maroon) 55%, #93293c 100%);
-    color: #fdf9f3;
-    padding: 72px 24px 96px;
+      radial-gradient(1100px 480px at 85% -10%, rgba(255, 236, 200, .18), transparent 60%),
+      radial-gradient(900px 500px at 5% 115%, rgba(255,255,255,.12), transparent 60%),
+      linear-gradient(135deg, #234459 0%, var(--blue-deep) 45%, var(--blue) 100%);
+    color: #f4f9fc;
+    padding: 70px 24px 92px;
     text-align: center;
     overflow: hidden;
   }
   .hero .eyebrow {
     display: inline-block;
-    letter-spacing: .35em;
-    text-indent: .35em;
+    letter-spacing: .32em;
+    text-indent: .32em;
     font-size: .85rem;
-    color: #eBd9b8;
-    border: 1px solid rgba(235,217,184,.45);
+    color: #cfe2ee;
+    border: 1px solid rgba(207,226,238,.5);
     border-radius: 999px;
     padding: 6px 18px;
     margin-bottom: 22px;
   }
   .hero h1 {
-    font-size: clamp(2rem, 5.5vw, 3.4rem);
+    font-size: clamp(1.9rem, 5.2vw, 3.2rem);
     font-weight: 900;
-    letter-spacing: .06em;
+    letter-spacing: .08em;
     margin-bottom: 14px;
   }
   .hero p.sub {
-    font-size: clamp(1rem, 2.2vw, 1.15rem);
-    color: #f3e4d2;
-    max-width: 560px;
-    margin: 0 auto 36px;
+    font-size: clamp(.98rem, 2.1vw, 1.12rem);
+    color: #dcebf4;
+    max-width: 600px;
+    margin: 0 auto 34px;
   }
   .hero .actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
   .btn {
@@ -74,19 +77,22 @@
     border-radius: 999px;
     font-size: 1rem; font-weight: 500;
     text-decoration: none;
-    transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+    border: 0; cursor: pointer;
+    font-family: inherit;
+    transition: transform .15s ease, box-shadow .15s ease, background .15s ease, opacity .15s ease;
   }
   .btn:hover { transform: translateY(-2px); }
-  .btn-gold {
-    background: linear-gradient(135deg, #d8b25e, var(--gold));
-    color: #3c2a08;
-    box-shadow: 0 6px 18px rgba(0,0,0,.22);
+  .btn-warm {
+    background: linear-gradient(135deg, #e6bc6a, var(--warm));
+    color: #43300c;
+    box-shadow: 0 6px 18px rgba(0,0,0,.2);
   }
   .btn-ghost {
-    border: 1.5px solid rgba(253,249,243,.65);
-    color: #fdf9f3;
+    border: 1.5px solid rgba(244,249,252,.6);
+    color: #f4f9fc;
+    background: transparent;
   }
-  .btn-ghost:hover { background: rgba(253,249,243,.12); }
+  .btn-ghost:hover { background: rgba(244,249,252,.12); }
   .hero .wave {
     position: absolute; left: 0; right: 0; bottom: -1px;
     display: block; width: 100%; height: 56px;
@@ -94,27 +100,22 @@
 
   /* ── Layout ───────────────────────── */
   main { max-width: 980px; margin: 0 auto; padding: 0 20px 40px; }
-  .section-head { text-align: center; margin: 64px 0 40px; }
-  .section-head h2 { font-size: clamp(1.5rem, 3.4vw, 2rem); color: var(--maroon-dark); letter-spacing: .08em; }
+  .section-head { text-align: center; margin: 60px 0 38px; }
+  .section-head h2 { font-size: clamp(1.5rem, 3.4vw, 2rem); color: var(--blue-deep); letter-spacing: .08em; }
   .section-head p { color: var(--ink-soft); margin-top: 8px; }
   .section-head .zh-num {
     display: block; font-size: .8rem; letter-spacing: .5em; text-indent: .5em;
-    color: var(--gold); margin-bottom: 6px; font-weight: 700;
+    color: var(--warm); margin-bottom: 6px; font-weight: 700;
   }
 
   /* ── Steps ────────────────────────── */
-  .step {
-    display: grid;
-    grid-template-columns: 64px 1fr;
-    gap: 20px;
-    margin-bottom: 26px;
-  }
+  .step { display: grid; grid-template-columns: 64px 1fr; gap: 20px; margin-bottom: 26px; }
   .step .no {
     width: 64px; height: 64px;
     border-radius: 50%;
     background: var(--card);
-    border: 2px solid var(--maroon);
-    color: var(--maroon);
+    border: 2px solid var(--blue);
+    color: var(--blue);
     font-family: "Noto Serif TC", serif;
     font-size: 1.6rem; font-weight: 900;
     display: flex; align-items: center; justify-content: center;
@@ -125,7 +126,7 @@
   .step:not(:last-of-type) .rail::after {
     content: "";
     position: absolute; top: 68px; bottom: -26px; left: 31px;
-    border-left: 2px dashed #d9c3aa;
+    border-left: 2px dashed var(--blue-soft);
   }
   .card {
     background: var(--card);
@@ -133,44 +134,46 @@
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     padding: 26px 28px;
+    min-width: 0;
   }
-  .card h3 { color: var(--maroon-dark); font-size: 1.22rem; margin-bottom: 8px; letter-spacing: .04em; }
-  .card p, .card li { color: #4a423b; }
-  .card ul { padding-left: 1.3em; margin-top: 8px; }
+  .card h3 { color: var(--blue-deep); font-size: 1.22rem; margin-bottom: 8px; letter-spacing: .04em; }
+  .card p, .card li { color: #43535e; }
+  .card ol, .card ul { padding-left: 1.4em; margin-top: 8px; }
   .card .tip {
     margin-top: 14px;
-    background: #fdf3e3;
-    border-left: 4px solid var(--gold);
+    background: var(--warm-soft);
+    border-left: 4px solid var(--warm);
     border-radius: 8px;
     padding: 10px 14px;
     font-size: .93rem;
-    color: #6a5424;
+    color: #6d5723;
   }
   .card .warn {
     margin-top: 14px;
-    background: #fbeef0;
-    border-left: 4px solid var(--maroon-soft);
+    background: var(--sky);
+    border-left: 4px solid var(--blue);
     border-radius: 8px;
     padding: 10px 14px;
     font-size: .93rem;
-    color: #7d2a3a;
+    color: var(--blue-deep);
   }
-  .card .btn-row { margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .card .btn-row { margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
   .btn-solid {
-    background: var(--maroon); color: #fff;
-    box-shadow: 0 6px 16px rgba(125,29,46,.28);
+    background: var(--blue); color: #fff;
+    box-shadow: 0 6px 16px rgba(60,110,143,.3);
   }
-  .btn-solid:hover { background: var(--maroon-dark); }
-  .btn-line { border: 1.5px solid var(--maroon); color: var(--maroon); }
-  .btn-line:hover { background: rgba(125,29,46,.06); }
+  .btn-solid:hover { background: var(--blue-deep); }
+  .btn-solid:disabled { opacity: .55; cursor: wait; transform: none; }
+  .btn-line { border: 1.5px solid var(--blue); color: var(--blue); background: transparent; }
+  .btn-line:hover { background: rgba(60,110,143,.07); }
   .email-chip {
     display: inline-block;
-    background: #f5ece0;
+    background: var(--sky);
     border: 1px solid var(--line);
     border-radius: 8px;
     padding: 2px 10px;
     font-weight: 700;
-    color: var(--maroon-dark);
+    color: var(--blue-deep);
     white-space: nowrap;
   }
 
@@ -184,13 +187,78 @@
   }
   .cal-wrap iframe { display: block; width: 100%; height: 480px; border: 0; }
 
+  /* ── 線上申請表 ────────────────────── */
+  .form-sec { margin-top: 20px; border-top: 1px solid var(--line); padding-top: 18px; }
+  .form-sec:first-of-type { border-top: 0; margin-top: 12px; padding-top: 0; }
+  .form-sec > .sec-title {
+    font-weight: 700; color: var(--blue-deep);
+    display: flex; align-items: center; gap: 8px;
+    margin-bottom: 10px;
+  }
+  .form-sec > .sec-title::before {
+    content: ""; width: 8px; height: 8px; border-radius: 2px;
+    background: var(--warm); display: inline-block;
+  }
+  .slot-grid { display: grid; grid-template-columns: 1.2fr .9fr .9fr 1fr; gap: 8px 10px; align-items: center; }
+  .slot-grid .head { font-size: .82rem; color: var(--ink-soft); font-weight: 500; }
+  .slot-row { display: contents; }
+  input[type="text"], input[type="date"], input[type="time"], input[type="number"] {
+    font-family: inherit;
+    font-size: .95rem;
+    color: var(--ink);
+    padding: 8px 10px;
+    border: 1.5px solid var(--line);
+    border-radius: 9px;
+    background: #fff;
+    width: 100%;
+    min-width: 0;
+    transition: border-color .15s ease, box-shadow .15s ease;
+  }
+  input:focus { outline: none; border-color: var(--blue-mid); box-shadow: 0 0 0 3px rgba(88,134,165,.18); }
+  .time-pair { display: flex; align-items: center; gap: 6px; }
+  .time-pair span { color: var(--ink-soft); }
+  .wd-badge {
+    font-size: .8rem; color: var(--blue); min-width: 2em; text-align: center;
+  }
+  .date-cell { display: flex; align-items: center; gap: 6px; }
+
+  .chk-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 6px 14px; }
+  .chk {
+    display: flex; align-items: center; gap: 8px;
+    font-size: .95rem; color: #43535e;
+    cursor: pointer; user-select: none;
+    padding: 4px 2px;
+  }
+  .chk input { accent-color: var(--blue); width: 17px; height: 17px; flex: none; cursor: pointer; }
+  .chk-line { display: flex; align-items: center; gap: 8px; margin-top: 4px; flex-wrap: wrap; }
+  .chk-line .chk { flex: none; }
+  .chk-line input[type="text"], .chk-line input[type="number"] { flex: 1; min-width: 140px; }
+  .chk-line .unit { color: var(--ink-soft); font-size: .92rem; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+  .contact-grid label { font-size: .82rem; color: var(--ink-soft); display: block; margin-bottom: 3px; }
+  .req::after { content: " *"; color: #c25454; }
+
+  #gen-status { font-size: .9rem; color: var(--ink-soft); }
+  #gen-status.error { color: #b04141; }
+  .success-box {
+    display: none;
+    margin-top: 16px;
+    background: #eef7ee;
+    border-left: 4px solid #5d9c62;
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: #2f5c33;
+    font-size: .95rem;
+  }
+  .success-box.show { display: block; }
+  .muted-link { font-size: .88rem; color: var(--ink-soft); }
+  .muted-link a { color: var(--blue); }
+
   /* keys grid */
   .keys { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
-  .keys .k {
-    border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; background: #fffdf9;
-  }
-  .keys .k .k-title { color: var(--maroon-dark); font-weight: 700; display: block; margin-bottom: 4px; }
-  .keys .k b { color: var(--maroon-dark); }
+  .keys .k { border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; background: #fbfdfe; }
+  .keys .k .k-title { color: var(--blue-deep); font-weight: 700; display: block; margin-bottom: 4px; }
+  .keys .k b { color: var(--blue-deep); }
 
   /* ── Rules ────────────────────────── */
   .rules { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -200,49 +268,52 @@
     padding: 22px; text-align: center;
   }
   .rule .ico { font-size: 1.8rem; }
-  .rule b { display: block; margin: 8px 0 4px; color: var(--maroon-dark); }
+  .rule b { display: block; margin: 8px 0 4px; color: var(--blue-deep); }
   .rule span { font-size: .92rem; color: var(--ink-soft); }
 
   /* ── Footer ───────────────────────── */
   footer {
     margin-top: 72px;
-    background: var(--maroon-dark);
-    color: #e9d5c4;
+    background: var(--blue-deep);
+    color: #cfe0ec;
     text-align: center;
     padding: 36px 20px;
     font-size: .95rem;
   }
-  footer a { color: #f3dfa8; }
+  footer a { color: #f0d9a8; }
   footer .ver { margin-top: 6px; font-size: .8rem; opacity: .7; }
 
-  @media (max-width: 680px) {
+  @media (max-width: 720px) {
     .step { grid-template-columns: 48px 1fr; gap: 14px; }
     .step .no { width: 48px; height: 48px; font-size: 1.25rem; }
     .step:not(:last-of-type) .rail::after { left: 23px; top: 52px; }
-    .rules, .keys { grid-template-columns: 1fr; }
+    .rules, .keys, .contact-grid { grid-template-columns: 1fr; }
     .cal-wrap iframe { height: 420px; }
-    .card { padding: 20px; }
+    .card { padding: 20px 16px; }
+    .slot-grid { grid-template-columns: 1fr 1fr; }
+    .slot-grid .head { display: none; }
+    .slot-row { display: grid; grid-template-columns: 1fr; gap: 6px; grid-column: 1 / -1; padding: 10px; border: 1px dashed var(--line); border-radius: 10px; }
   }
 </style>
 </head>
 <body>
 
 <header class="hero">
-  <span class="eyebrow">臺大心理系 臨床組</span>
-  <h1>臨床組空間借用</h1>
-  <p class="sub">教室／空間借用四步驟：查時段、填表單、簽名寄出、領鑰匙。<br>照著走，一次登記完成。</p>
+  <span class="eyebrow">國立臺灣大學 心理學系</span>
+  <h1>臨床心理學組空間借用</h1>
+  <p class="sub">查詢空間時段後，於線上填寫借用申請單，系統將自動產生 PDF 檔，完成簽名程序後寄出即可。</p>
   <div class="actions">
-    <a class="btn btn-gold" href="assets/booking-form.pdf" download="臨床組空間借用申請單.pdf">⬇ 下載借用申請單</a>
-    <a class="btn btn-ghost" href="#step1">查看借用流程 ↓</a>
+    <a class="btn btn-warm" href="#step2">📝 線上填寫申請單</a>
+    <a class="btn btn-ghost" href="#step1">查詢空間時段</a>
   </div>
-  <svg class="wave" viewBox="0 0 1440 56" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,32 C320,64 640,0 960,16 C1200,28 1360,44 1440,36 L1440,56 L0,56 Z" fill="#faf6f0"/></svg>
+  <svg class="wave" viewBox="0 0 1440 56" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,32 C320,64 640,0 960,16 C1200,28 1360,44 1440,36 L1440,56 L0,56 Z" fill="#f5f8fa"/></svg>
 </header>
 
 <main>
   <div class="section-head" id="steps">
     <span class="zh-num">借用流程</span>
     <h2>四步驟完成空間借用</h2>
-    <p>申請前請先確認時段，並預留至少兩週作業時間</p>
+    <p>請至少於借用日兩週前提出申請</p>
   </div>
 
   <!-- Step 1 -->
@@ -250,9 +321,9 @@
     <div class="rail"><div class="no">1</div></div>
     <div class="card">
       <h3>查詢時段是否已被借用</h3>
-      <p>先在下方的 <b>臨床組空間行事曆</b> 查看你想借用的日期與時段，確認該空間尚未被登記。</p>
+      <p>請先於下方行事曆確認欲借用之日期與時段，該空間尚未被登記。</p>
       <div class="cal-wrap">
-        <iframe id="calendar-frame" title="臨床組空間借用行事曆" loading="lazy" src=""></iframe>
+        <iframe id="calendar-frame" title="臨床心理學組空間借用行事曆" loading="lazy" src=""></iframe>
       </div>
       <div class="btn-row">
         <a class="btn btn-line" id="calendar-link" href="#" target="_blank" rel="noopener">在新分頁開啟行事曆 ↗</a>
@@ -260,16 +331,128 @@
     </div>
   </div>
 
-  <!-- Step 2 -->
+  <!-- Step 2：線上填寫 -->
   <div class="step" id="step2">
     <div class="rail"><div class="no">2</div></div>
     <div class="card">
-      <h3>下載並填寫借用申請單</h3>
-      <p>下載申請單後，填寫借用日期、時間、教室、借用事由、參與人員與聯絡方式。</p>
-      <div class="tip">📌 每次借用至多 <b>5 個時段</b>，並請至少於 <b>兩週前</b> 提出申請。</div>
-      <div class="btn-row">
-        <a class="btn btn-solid" href="assets/booking-form.pdf" download="臨床組空間借用申請單.pdf">⬇ 下載申請單 PDF</a>
-      </div>
+      <h3>線上填寫借用申請單</h3>
+      <p>填寫下列資料後，系統將自動產生填妥的申請單 PDF 供下載列印。</p>
+
+      <form id="booking-form" onsubmit="return false;">
+        <div class="form-sec">
+          <div class="sec-title">借用時段（至多 5 筆，每次申請至多 5 個時段）</div>
+          <div class="slot-grid">
+            <div class="head">日期（星期自動帶入）</div>
+            <div class="head">開始</div>
+            <div class="head">結束</div>
+            <div class="head">教室</div>
+            <!-- 5 rows -->
+            <div class="slot-row">
+              <div class="date-cell"><input type="date" class="slot-date"><span class="wd-badge"></span></div>
+              <input type="time" class="slot-start">
+              <input type="time" class="slot-end">
+              <input type="text" class="slot-room" list="room-list" placeholder="如 S119">
+            </div>
+            <div class="slot-row">
+              <div class="date-cell"><input type="date" class="slot-date"><span class="wd-badge"></span></div>
+              <input type="time" class="slot-start">
+              <input type="time" class="slot-end">
+              <input type="text" class="slot-room" list="room-list" placeholder="">
+            </div>
+            <div class="slot-row">
+              <div class="date-cell"><input type="date" class="slot-date"><span class="wd-badge"></span></div>
+              <input type="time" class="slot-start">
+              <input type="time" class="slot-end">
+              <input type="text" class="slot-room" list="room-list" placeholder="">
+            </div>
+            <div class="slot-row">
+              <div class="date-cell"><input type="date" class="slot-date"><span class="wd-badge"></span></div>
+              <input type="time" class="slot-start">
+              <input type="time" class="slot-end">
+              <input type="text" class="slot-room" list="room-list" placeholder="">
+            </div>
+            <div class="slot-row">
+              <div class="date-cell"><input type="date" class="slot-date"><span class="wd-badge"></span></div>
+              <input type="time" class="slot-start">
+              <input type="time" class="slot-end">
+              <input type="text" class="slot-room" list="room-list" placeholder="">
+            </div>
+          </div>
+          <datalist id="room-list">
+            <option value="S119"></option>
+            <option value="S121"></option>
+          </datalist>
+        </div>
+
+        <div class="form-sec">
+          <div class="sec-title">借用事由（可複選）</div>
+          <div class="chk-grid">
+            <label class="chk"><input type="checkbox" id="p-course">系內課程</label>
+            <label class="chk"><input type="checkbox" id="p-experiment">實驗</label>
+            <label class="chk"><input type="checkbox" id="p-labmeeting">Lab Meeting</label>
+            <label class="chk"><input type="checkbox" id="p-meeting">會議</label>
+            <label class="chk"><input type="checkbox" id="p-discussion">討論</label>
+            <label class="chk"><input type="checkbox" id="p-talk">演講</label>
+            <label class="chk"><input type="checkbox" id="p-oral">口試</label>
+          </div>
+          <div class="chk-line">
+            <label class="chk"><input type="checkbox" id="p-seminar">研討會</label>
+            <input type="text" id="p-seminar-text" placeholder="研討會名稱">
+          </div>
+          <div class="chk-line">
+            <label class="chk"><input type="checkbox" id="p-event">活動</label>
+            <input type="text" id="p-event-text" placeholder="活動名稱">
+          </div>
+          <div class="chk-line">
+            <label class="chk"><input type="checkbox" id="p-other">其他</label>
+            <input type="text" id="p-other-text" placeholder="請說明">
+          </div>
+        </div>
+
+        <div class="form-sec">
+          <div class="sec-title">收費</div>
+          <div class="chk-line">
+            <label class="chk"><input type="radio" name="fee" id="fee-no" checked>不收費</label>
+            <label class="chk"><input type="radio" name="fee" id="fee-yes">有收費</label>
+            <input type="number" id="fee-amount" min="0" placeholder="金額" style="max-width:110px">
+            <span class="unit">元／人</span>
+          </div>
+        </div>
+
+        <div class="form-sec">
+          <div class="sec-title">參與人員</div>
+          <div class="chk-line">
+            <label class="chk"><input type="checkbox" id="pp-internal">系內師生</label>
+            <label class="chk"><input type="checkbox" id="pp-external">系外人員</label>
+            <input type="text" id="pp-external-text" placeholder="系外人員說明（單位／身分）">
+          </div>
+          <div class="chk-line">
+            <span class="unit req">總計人數</span>
+            <input type="number" id="pp-total" min="1" placeholder="人數" style="max-width:110px">
+            <span class="unit">人</span>
+          </div>
+        </div>
+
+        <div class="form-sec">
+          <div class="sec-title">聯絡資訊</div>
+          <div class="contact-grid">
+            <div><label class="req" for="c-name">聯絡人姓名</label><input type="text" id="c-name"></div>
+            <div><label class="req" for="c-phone1">手機 1</label><input type="text" id="c-phone1" placeholder="09xx-xxx-xxx"></div>
+            <div><label for="c-phone2">手機 2（選填）</label><input type="text" id="c-phone2"></div>
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn btn-solid" id="gen-btn">📄 產生申請單 PDF</button>
+          <span id="gen-status"></span>
+        </div>
+        <div class="success-box" id="success-box">
+          ✅ 申請單已下載！請列印後依 <a href="#step3">步驟三</a> 完成簽名並寄出。
+        </div>
+        <p class="muted-link" style="margin-top:14px">
+          偏好手寫？<a href="assets/booking-form.pdf" download="臨床組空間借用申請單.pdf">下載空白申請單 PDF</a>
+        </p>
+      </form>
     </div>
   </div>
 
@@ -277,13 +460,13 @@
   <div class="step" id="step3">
     <div class="rail"><div class="no">3</div></div>
     <div class="card">
-      <h3>簽名後掃描寄出</h3>
-      <p>填妥後，請依序完成：</p>
-      <ul>
-        <li>取得 <b>臨床組召集人</b> 簽名</li>
+      <h3>完成簽名並寄出</h3>
+      <p>列印產生的申請單後，請依序完成：</p>
+      <ol>
         <li>取得 <b>指導教授親筆簽名</b></li>
+        <li>取得 <b>臨床組召集人</b> 簽名</li>
         <li>將表單<b>掃描成電子檔</b>，寄給 <span class="email-chip"><span data-contact-email>載入中…</span>（<span data-contact-name>…</span>）</span> 進行登記</li>
-      </ul>
+      </ol>
       <div class="warn">✍️ 依 107-2 臨床組會議決議：教室借用需請教師<b>親筆簽名</b>，蓋章視同無效。</div>
       <div class="tip">✅ 寄出後，可回到 <a href="#step1">行事曆</a> 查看自己的借用是否已登記完成。</div>
       <div class="btn-row">
@@ -304,7 +487,7 @@
         </div>
         <div class="k">
           <span class="k-title">🔑 借用其他教室</span>
-          請向<b>臨床組指導教授</b>借用鑰匙，本表<b>自行留存</b>即可。
+          等待借用成功時，<b>負責人會再與您說明</b>鑰匙放置位置與使用規則。
         </div>
       </div>
     </div>
@@ -323,7 +506,7 @@
     <div class="rule">
       <div class="ico">✍️</div>
       <b>親筆簽名</b>
-      <span>需臨床組召集人與指導教授親筆簽名，蓋章視同無效。</span>
+      <span>需指導教授與臨床組召集人親筆簽名，蓋章視同無效。</span>
     </div>
     <div class="rule">
       <div class="ico">📧</div>
@@ -334,34 +517,172 @@
 </main>
 
 <footer>
-  <div>臨床組空間借用聯絡人：<a data-mailto href="#"><span data-contact-email>載入中…</span></a>（<span data-contact-name>…</span>）</div>
-  <div class="ver">表單版本：<span id="form-version">—</span>｜臺大心理系臨床組</div>
+  <div>空間借用聯絡人：<a data-mailto href="#"><span data-contact-email>載入中…</span></a>（<span data-contact-name>…</span>）</div>
+  <div class="ver">表單版本：<span id="form-version">—</span>｜國立臺灣大學心理學系 臨床心理學組</div>
 </footer>
 
+<script src="assets/vendor/pdf-lib.min.js" defer></script>
+<script src="assets/vendor/fontkit2.browser.js" defer></script>
+<script src="assets/form-fill.js" defer></script>
 <script>
-(async function () {
-  try {
-    const res = await fetch('config.json?v=' + Date.now());
-    const cfg = await res.json();
+(function () {
+  'use strict';
 
-    document.querySelectorAll('[data-contact-email]').forEach(el => el.textContent = cfg.contactEmail);
-    document.querySelectorAll('[data-contact-name]').forEach(el => el.textContent = cfg.contactName);
-    document.getElementById('form-version').textContent = cfg.formVersion || '';
+  /* ── 設定載入 ─────────────────────── */
+  (async function loadConfig() {
+    try {
+      const res = await fetch('config.json?v=' + Date.now());
+      const cfg = await res.json();
 
-    const subject = encodeURIComponent('臨床組空間借用申請_姓名_借用日期');
-    const body = encodeURIComponent('您好：\n\n附件為已完成簽名的臨床組空間借用申請單，煩請協助登記，謝謝！\n\n（請記得附上掃描檔）');
-    const mailto = `mailto:${cfg.contactEmail}?subject=${subject}&body=${body}`;
-    document.getElementById('mailto-btn').href = mailto;
-    document.querySelectorAll('[data-mailto]').forEach(el => el.href = mailto);
+      document.querySelectorAll('[data-contact-email]').forEach(el => el.textContent = cfg.contactEmail);
+      document.querySelectorAll('[data-contact-name]').forEach(el => el.textContent = cfg.contactName);
+      document.getElementById('form-version').textContent = cfg.formVersion || '';
 
-    const calSrc = 'https://calendar.google.com/calendar/embed?src=' + encodeURIComponent(cfg.calendarId)
-      + '&ctz=Asia%2FTaipei&mode=WEEK&showTitle=0&showPrint=0&showCalendars=0&showTz=0&hl=zh_TW';
-    document.getElementById('calendar-frame').src = calSrc;
-    document.getElementById('calendar-link').href =
-      'https://calendar.google.com/calendar/embed?src=' + encodeURIComponent(cfg.calendarId) + '&ctz=Asia%2FTaipei&hl=zh_TW';
-  } catch (e) {
-    console.error('config.json 載入失敗', e);
+      const subject = encodeURIComponent('臨床組空間借用申請_姓名_借用日期');
+      const body = encodeURIComponent('您好：\n\n附件為已完成簽名的臨床組空間借用申請單，煩請協助登記，謝謝！\n\n（請記得附上掃描檔）');
+      const mailto = `mailto:${cfg.contactEmail}?subject=${subject}&body=${body}`;
+      document.getElementById('mailto-btn').href = mailto;
+      document.querySelectorAll('[data-mailto]').forEach(el => el.href = mailto);
+
+      const calSrc = 'https://calendar.google.com/calendar/embed?src=' + encodeURIComponent(cfg.calendarId)
+        + '&ctz=Asia%2FTaipei&mode=WEEK&showTitle=0&showPrint=0&showCalendars=0&showTz=0&hl=zh_TW';
+      document.getElementById('calendar-frame').src = calSrc;
+      document.getElementById('calendar-link').href =
+        'https://calendar.google.com/calendar/embed?src=' + encodeURIComponent(cfg.calendarId) + '&ctz=Asia%2FTaipei&hl=zh_TW';
+    } catch (e) {
+      console.error('config.json 載入失敗', e);
+    }
+  })();
+
+  /* ── 星期自動帶入 ─────────────────── */
+  const WD = (window.FormFill && window.FormFill.WEEKDAYS) || ['日','一','二','三','四','五','六'];
+  document.querySelectorAll('.slot-date').forEach(input => {
+    input.addEventListener('change', () => {
+      const badge = input.parentElement.querySelector('.wd-badge');
+      if (input.value) {
+        const d = new Date(input.value + 'T00:00:00');
+        badge.textContent = '（' + WD[d.getDay()] + '）';
+      } else {
+        badge.textContent = '';
+      }
+    });
+  });
+
+  /* ── 勾選連動 ─────────────────────── */
+  [['p-seminar', 'p-seminar-text'], ['p-event', 'p-event-text'], ['p-other', 'p-other-text'],
+   ['pp-external', 'pp-external-text']].forEach(([cb, txt]) => {
+    document.getElementById(txt).addEventListener('input', e => {
+      if (e.target.value.trim()) document.getElementById(cb).checked = true;
+    });
+  });
+  document.getElementById('fee-amount').addEventListener('input', e => {
+    if (e.target.value) document.getElementById('fee-yes').checked = true;
+  });
+
+  /* ── 資料收集 ─────────────────────── */
+  function collectFormData() {
+    const rows = [];
+    document.querySelectorAll('.slot-row').forEach(row => {
+      const date = row.querySelector('.slot-date').value;
+      const start = row.querySelector('.slot-start').value;
+      const end = row.querySelector('.slot-end').value;
+      const room = row.querySelector('.slot-room').value.trim();
+      if (!date && !start && !room) return;
+      if (!date || !start || !end || !room) {
+        throw new Error('借用時段每筆須填齊日期、開始／結束時間與教室');
+      }
+      const d = new Date(date + 'T00:00:00');
+      rows.push({
+        date: (d.getMonth() + 1) + '/' + d.getDate(),
+        weekday: WD[d.getDay()],
+        time: start + '–' + end,
+        room: room
+      });
+    });
+    if (!rows.length) throw new Error('請至少填寫一筆借用時段');
+
+    const v = id => document.getElementById(id).value.trim();
+    const c = id => document.getElementById(id).checked;
+
+    const purposes = {
+      course: c('p-course'), experiment: c('p-experiment'), labMeeting: c('p-labmeeting'),
+      meeting: c('p-meeting'), discussion: c('p-discussion'), talk: c('p-talk'), oral: c('p-oral'),
+      seminar: c('p-seminar'), seminarText: v('p-seminar-text'),
+      event: c('p-event'), eventText: v('p-event-text'),
+      other: c('p-other'), otherText: v('p-other-text')
+    };
+    if (!Object.values(purposes).some(x => x === true)) throw new Error('請勾選至少一項借用事由');
+
+    if (!v('c-name')) throw new Error('請填寫聯絡人姓名');
+    if (!v('c-phone1')) throw new Error('請填寫聯絡電話（手機 1）');
+    if (!v('pp-total')) throw new Error('請填寫總計人數');
+
+    const now = new Date();
+    return {
+      fillDate: { y: now.getFullYear() - 1911, m: now.getMonth() + 1, d: now.getDate() },
+      rows,
+      purposes,
+      fee: { charged: c('fee-yes'), amount: v('fee-amount') },
+      participants: {
+        internal: c('pp-internal'),
+        external: c('pp-external'),
+        externalText: v('pp-external-text'),
+        total: v('pp-total')
+      },
+      contactName: v('c-name'),
+      phone1: v('c-phone1'),
+      phone2: v('c-phone2')
+    };
   }
+
+  /* ── 資源載入（PDF 底稿與字型，僅第一次） ── */
+  let resourcesPromise = null;
+  function loadResources() {
+    if (!resourcesPromise) {
+      resourcesPromise = Promise.all([
+        fetch('assets/booking-form.pdf').then(r => { if (!r.ok) throw new Error('底稿載入失敗'); return r.arrayBuffer(); }),
+        fetch('assets/fonts/NotoSansTC-Regular.ttf').then(r => { if (!r.ok) throw new Error('字型載入失敗'); return r.arrayBuffer(); })
+      ]).catch(e => { resourcesPromise = null; throw e; });
+    }
+    return resourcesPromise;
+  }
+
+  /* ── 產生 PDF ─────────────────────── */
+  const genBtn = document.getElementById('gen-btn');
+  const status = document.getElementById('gen-status');
+  const successBox = document.getElementById('success-box');
+
+  window.generatePdfBytes = async function () {   // 拆出供測試
+    const data = collectFormData();
+    const [baseBytes, fontBytes] = await loadResources();
+    const bytes = await window.FormFill.fillForm(window.PDFLib, window.fontkit, baseBytes, fontBytes, data);
+    return { bytes, data };
+  };
+
+  genBtn.addEventListener('click', async () => {
+    successBox.classList.remove('show');
+    status.classList.remove('error');
+    try {
+      genBtn.disabled = true;
+      status.textContent = '產生中…（首次使用需載入字型，請稍候）';
+      const { bytes, data } = await window.generatePdfBytes();
+      const blob = new Blob([bytes], { type: 'application/pdf' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = '臨床組空間借用申請單_' + data.contactName + '.pdf';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(a.href), 30000);
+      status.textContent = '';
+      successBox.classList.add('show');
+    } catch (e) {
+      status.classList.add('error');
+      status.textContent = '⚠ ' + (e && e.message ? e.message : '產生失敗，請重試');
+    } finally {
+      genBtn.disabled = false;
+    }
+  });
 })();
 </script>
 
